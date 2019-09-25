@@ -59,7 +59,8 @@ func FormatLogRecord(format string, rec *LogRecord) string {
 	secs := rec.Created.UnixNano() / 1e9
 
 	cache := getFormatCache()
-	if cache.LastUpdateSeconds != secs {
+	// if cache.LastUpdateSeconds != secs {
+	if true {
 		updated := &formatCacheType{
 			LastUpdateSeconds: secs,
 			shortTime:         rec.Created.Format("15:04:05"),
